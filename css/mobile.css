@@ -1,0 +1,99 @@
+@import url("./style.css");
+
+html{
+  font-size: 10px;
+}
+.header-menu{
+  display: none;
+ }
+ .header-logo img{
+  width: 50%;
+}
+.text-slider h2 {
+  font-size: 1.2rem;
+}
+.text-slider h1 {
+  font-size: 1.7rem;
+}
+ .register{
+   display: none;
+ }
+ .burger-menu{
+   display: block;
+ }
+
+.filter-button{
+  display: none;
+}
+.fas .fa-search{
+  display: none;
+}
+.collection-heading {
+  display: flex;
+  flex-direction: column;
+}
+.filter-button{
+  display: none;
+}
+.filters button:nth-child(4){
+  display: inline;
+  border: none;
+}
+.filters button:last-child{
+  margin-left: 0;
+}
+.slider-container{
+  width: 32rem;
+}
+.active{
+  width: 280px;
+  height:36rem;
+}
+.inactive-left{
+  margin-left: -15rem;
+  width: 10rem;
+  height: 25rem;
+ 
+ }
+ .inactive-right{
+   margin-right: -15rem;
+   width: 10rem;
+   height: 25rem;
+  
+  }
+.front{
+  min-width: 280px;
+  max-width: 280px;
+  height: 35rem;
+}
+.footer-logo{
+  text-align: center;
+}
+.footer-logo img{
+  width: 25%;
+}
+.contact{
+  flex-flow: wrap;
+  align-items: center;
+}
+.connect{
+  width: 50%;
+  align-items: center;
+}
+.policy{
+  width: 50%;
+}
+.links{
+  margin-top: 2rem;
+  width: 50%;
+}
+.subscribe{
+  margin-top: 2rem;
+  width: 50%;
+}
+.subscribe a i{
+  margin-left:-1rem;
+}
+.subscribe input{
+  font-size: 1rem;
+}

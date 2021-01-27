@@ -1,0 +1,21 @@
+@import url("./style.css");
+html{
+  font-size: 14px;
+}
+.left-side{
+  margin-left: -20rem;
+  min-width: 350px;
+  max-width: 350px;
+  height: 35rem;
+}
+.right-side{
+  margin-right: -20rem;
+  min-width: 350px;
+  max-width: 350px;
+  height: 35rem;
+}
+.front{
+  min-width: 350px;
+  max-width: 350px;
+  height: 35rem;
+}

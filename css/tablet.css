@@ -1,0 +1,27 @@
+@import url("./style.css");
+html{
+  font-size: 13px;
+}
+.header-logo img{
+  width: 70%;
+}
+.header-menu{
+ display: none;
+}
+.register{
+  display: none;
+}
+.burger-menu{
+  display: block;
+}
+.contact{
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+}
+.front{
+  min-width: 300px;
+  max-width: 300px;
+  height: 35rem;
+}
