@@ -8,7 +8,8 @@
   <link rel="stylesheet" media="screen and (min-width:501px) and (max-width:768px)" href="css/tablet.css">
   <link rel="stylesheet" media="screen and (max-width:500px)" href="css/mobile.css">
   <script src="https://kit.fontawesome.com/647354dd51.js" crossorigin="anonymous"></script>
-  <title>Space</title>
+  <link rel="icon" href="favicon.png">
+  <title>Space HighTech | LOGICADE</title>
 </head>
 <body>
   <header class="header">
@@ -19,9 +20,9 @@
         </div>
         <div class="header-menu">
           <ul>
-            <a href="index.html"><li>Home</li></a>
-            <a href="#"><li>Products</li></a>
-            <a href="#"><li>Payment</li></a>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Payment</a></li>
           </ul>
           <button><i class="fas fa-search"></i></button>
         </div>
@@ -198,27 +199,28 @@
     <section class="footer">
       <div class="container">  
         <div class="footer-logo">
-          <a href="#"><img src="img/header-logo.png"></a>
+          <a href="index.html"><img src="img/header-logo.png"></a>
         </div>
         <div class="contact">
           <div class="connect">
             <div><h3>Follow Us</h3></div>
-            <div><a href="#"><i class="fab fa-facebook-square"></i></a>
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
-            <a href="#"><i class="fab fa-pinterest"></i></a></div>
+            <div>
+              <a href="#"><i class="fab fa-facebook-square"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a></div>
           </div>
           <div class="policy">  
             <ul>
-              <a href="#"><li>Privacy policy</li></a>
-              <a href="#"><li>Refund policy</li></a>
-              <a href="#"><li>Terms of service</li></a>
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Refund policy</a></li>
+              <li><a href="#">Terms of service</a></li>
             </ul>
           </div>
           <div class="links">
             <ul>
-              <a href="#"><li>FAQ</li></a>
-              <a href="#"><li>Contact Us</li></a>
-              <a href="#"><li>About Us</li></a>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">About Us</a></li>
             </ul>
           </div>
           <div class="subscribe">
@@ -230,11 +232,23 @@
         </div>
         <div class="copyright">
           <div class="container">
-            <p>© 2019 SpaceHighTech.com</p>
+            <p>© 2019 SpaceHighTech.com | LOGIDACE</p>
           </div>  
         </div>
       </div>
     </section>
   </footer>
+  <script>
+      // prevent default
+      document.querySelector('body').addEventListener('click', preventDflt);
+      function preventDflt(e){
+        var tElment = e.target.getAttribute('href');
+        var tElmentP = e.target.parentElement.getAttribute('href');
+        if(tElment == '#' || tElmentP == '#'){
+          e.preventDefault();
+        }
+      }
+  </script>
+    
 </body>
 </html>

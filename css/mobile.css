@@ -39,6 +39,9 @@ html{
   display: inline;
   border: none;
 }
+.filters button:nth-child(4):focus{
+  outline: none;
+}
 .filters button:last-child{
   margin-left: 0;
 }
