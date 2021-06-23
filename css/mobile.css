@@ -3,9 +3,12 @@
 html{
   font-size: 10px;
 }
-.header-menu{
+/* .header-menu{
   display: none;
- }
+ } */
+ .bg {
+  display: block;
+}
  .header-logo img{
   width: 50%;
 }
@@ -14,6 +17,9 @@ html{
 }
 .text-slider h1 {
   font-size: 1.7rem;
+}
+.text-slider .container li{
+  width: 300px;
 }
  .register{
    display: none;
@@ -37,9 +43,8 @@ html{
 }
 .filters button:nth-child(4){
   display: inline;
-  border: none;
 }
-.filters button:nth-child(4):focus{
+.filters button:nth-child(5):focus{
   outline: none;
 }
 .filters button:last-child{
@@ -99,4 +104,8 @@ html{
 }
 .subscribe input{
   font-size: 1rem;
+}
+.acording_content {
+  width: 400px !important;
+  top: 70px;
 }

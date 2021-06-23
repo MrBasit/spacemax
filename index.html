@@ -1,53 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" media="screen and (min-width:991px)" href="css/style.css">
-  <link rel="stylesheet" media="screen and (min-width:769px) and (max-width:990px)" href="css/medium.css">
-  <link rel="stylesheet" media="screen and (min-width:501px) and (max-width:768px)" href="css/tablet.css">
-  <link rel="stylesheet" media="screen and (max-width:500px)" href="css/mobile.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" media="screen and (max-width:980px)" href="css/medium.css">
+  <link rel="stylesheet" media="screen and (max-width:768px)" href="css/tablet.css">
+  <link rel="stylesheet" media="screen and (max-width:580px)" href="css/mobile.css"> -->
   <script src="https://kit.fontawesome.com/647354dd51.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/lightslider.css">
+  <script src="./js/jquery-3.5.1.min.js"></script>
+  <script src="./js/lightslider.js"></script>
+
   <link rel="icon" href="favicon.png">
   <title>Space HighTech | LOGICADE</title>
 </head>
+
 <body>
   <header class="header">
-    <div class="container">
+    <div class="container header-container">
       <nav class="navbar">
         <div class="header-logo">
           <a href="index.html"><img src="img/header-logo.png"></a>
         </div>
-        <div class="header-menu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Payment</a></li>
-          </ul>
-          <button><i class="fas fa-search"></i></button>
+        <div class="bg">
+          <i class="fas fa-bars burger-menu"></i>
         </div>
+
+        <ul class="nav-ul header-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Payment</a></li>
+          <!-- <button class="search-icon"><i class="fas fa-search"></i></button> -->
+          <li class="search-container">
+            <input type="text" name="search" placeholder="Search..." class="search-input">
+            <a href="#" class="search-btn">
+                    <i class="fas fa-search"></i>      
+            </a>
+          </li>
+         
+        
+        </ul>
+
+
         <div class="register">
           <a href="#"><i class="fas fa-cart-arrow-down"></i></a>
-          <button class="log-in">Log In</button>
-          <button class="sign-up">Sign Up</button>
+          <button class="log-in" id="log">Log In</button>
+          <button class="sign-up" id="sign">Sign Up</button>
         </div>
-        <div class="burger-menu">
-          <i class="fas fa-bars"></i>
-        </div>
+
       </nav>
     </div>
   </header>
   <!-- ------------------------------------- -->
   <main>
 
-    
+
     <section class="text-slider">
-      <div class="container">
-        <div>
-          <h1>Explore -</h1>
-          <h2>the Latest Technology</h2>
-        </div>
-        <h4>01</h4>
+      <div class="container text-slider-main">
+        <ul id="autoWidth3" class="cs-hidden">
+          <li class="item-a">
+
+            <a href="#">
+              <h1>Explore -01</h1>
+            </a>
+            <h2>the Latest Technology</h2>
+
+          </li>
+
+          <li class="item-b">
+
+            <a href="#">
+              <h1>Create -02</h1>
+            </a>
+            <h2>the Latest Technology</h2>
+
+          </li>
+
+          <li class="item-c">
+
+            <a href="#">
+              <h1>Order -03</h1>
+            </a>
+            <h2>the Latest Technology</h2>
+
+          </li>
+        </ul>
       </div>
     </section>
     <!-- -- -->
@@ -57,43 +96,75 @@
           <div class="slider-heading">
             <h1>Curated Collection</h1>
           </div>
-          <div class="slider-numbers">
-            <h2>1</h2>
-            <h2>2</h2>
-            <h2>3</h2>
-            <h2>4</h2>
-            <h2>5</h2>
-            <h2>6</h2>
+
+          <div class="items">
+            <div class="item active">
+              <div class="slider-img">
+                <div class="slider-effect">
+                  <div class="slider-cont">
+                    <h1>Mac Products 1</h1>
+                    <p>We imagine, design, and engineer brand programs and platforms for today’s most innovative
+                      companies.</p>
+                    <a href="#">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=" item next">
+              <div class="slider-img" id="sliderImage-2">
+                <div class="slider-effect">
+                  <div class="slider-cont">
+                    <h1>Mac Products 2</h1>
+                    <p>We imagine, design, and engineer brand programs and platforms for today’s most innovative
+                      companies.</p>
+                    <a href="#">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="slider-img" id="sliderImage-3">
+                <div class="slider-effect">
+                  <div class="slider-cont">
+                    <h1>Mac Products 3</h1>
+                    <p>We imagine, design, and engineer brand programs and platforms for today’s most innovative
+                      companies.</p>
+                    <a href="#">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="slider-img" id="sliderImage-4">
+                <div class="slider-effect">
+                  <div class="slider-cont">
+                    <h1>Mac Products 4</h1>
+                    <p>We imagine, design, and engineer brand programs and platforms for today’s most innovative
+                      companies.</p>
+                    <a href="#">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item prev">
+              <div class="slider-img" id="sliderImage-5">
+                <div class="slider-effect">
+                  <div class="slider-cont">
+                    <h1>Mac Products 5</h1>
+                    <p>We imagine, design, and engineer brand programs and platforms for today’s most innovative
+                      companies.</p>
+                    <a href="#">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="button-container">
+              <div class="button" id="left"><i class="fas fa-angle-left"></i></div>
+              <div class="button" id="right"><i class="fas fa-angle-right"></i></div>
+            </div>
           </div>
-          <div class="slider-container">
-            <div class="slider-img inactive-left">
-              <div class="slider-effect">
-                <div class="slider-cont">
-                  <h1>Mac Products</h1>
-                  <p>We imagine, design, and engineer brand programs and platforms for today’s most innovative companies.</p>
-                  <a href="#">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="slider-img active">
-              <div class="slider-effect">
-                <div class="slider-cont">
-                  <h1>Mac Products</h1>
-                  <p>We imagine, design, and engineer brand programs and platforms for today’s most innovative companies.</p>
-                  <a href="#">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="slider-img inactive-right">
-              <div class="slider-effect">
-                <div class="slider-cont">
-                  <h1>Mac Products</h1>
-                  <p>We imagine, design, and engineer brand programs and platforms for today’s most innovative companies.</p>
-                  <a href="#">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
+
+
         </div>
       </div>
     </section>
@@ -102,84 +173,306 @@
       <div class="container">
         <div class="story-cont">
           <h1>Read Our Story</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dolor, reiciendis vero quam reprehenderit minus ipsum aspernatur officiis excepturi quasi perspiciatis est dolore eveniet nam sint, quo esse saepe! Tenetur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dolor, reiciendis vero quam reprehenderit minus ipsum aspernatur officiis excepturi quasi perspiciatis est dolore eveniet nam sint, quo esse saepe! Tenetur?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dolor, reiciendis vero quam reprehenderit
+            minus ipsum aspernatur officiis excepturi quasi perspiciatis est dolore eveniet nam sint, quo esse saepe!
+            Tenetur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dolor, reiciendis vero quam
+            reprehenderit minus ipsum aspernatur officiis excepturi quasi perspiciatis est dolore eveniet nam sint, quo
+            esse saepe! Tenetur?</p>
         </div>
       </div>
     </section>
-    <!-- -- -->
+
+
     <section class="collection">
       <div class="container">
         <div class="collections">
           <div class="collection-heading">
-            <h1>Curated Collection</h1>
-            <p>- Parmanent Collection of products</p>
-          </div>
-          <div class="collection-filters">
-            <div class="filters">
-              <button class="filter-button">Most Viewed</button>
-              <button class="filter-button">Recent</button>
-              <button class="filter-button">Famous</button>
-              <button><i class="fas fa-filter"></i></button>
-              <button><i class="fas fa-search"></i></button>
-            </div>
-            <div class="clear-filter">
-              <button>clear filters</button>
-            </div>
-          </div>
-          <div class="collection-slideshow">
-            <div class="collection-container">
-              <div class="collection-img1 front">
-                <div class="collection-effect">
-                  <div class="collection-cont">
-                    <h1>Mac Products</h1>
-                    <p>We imagine, design, and engineer brand programs and platforms for today’s most innovative companies.</p>
-                    <a href="#">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
-                  </div>
-                </div>
+            <div class="main-filter">
+              <div class="collection-heading-sub">
+                <h1>Curated Collection</h1>
+                <p>- Parmanent Collection of products</p>
               </div>
-              <div class="collection-img2 front">
-                <div class="collection-effect">
-                  <div class="collection-cont">
-                    <h1>Computer Gadgets</h1>
-                    <p>We imagine, design, and engineer brand programs and platforms for today’s most innovative companies.</p>
-                    <a href="#">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="collection-img3 front">
-                <div class="collection-effect">
-                  <div class="collection-cont">
-                    <h1>Mac Products</h1>
-                    <p>We imagine, design, and engineer brand programs and platforms for today’s most innovative companies.</p>
-                    <a href="#">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="collection-img4 front">
-                <div class="collection-effect">
-                  <div class="collection-cont">
-                    <h1>Mac Products</h1>
-                    <p>We imagine, design, and engineer brand programs and platforms for today’s most innovative companies.</p>
-                    <a href="#">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
-                  </div>
-                </div>              
-              </div>
-            </div>
-          </div>
+              <div class="filter">
+                <button class="acordian__button">Filter <i class="fas fa-filter"></i></button>
+                <div class="collection-filters acording_content">
 
-        </div>
-      </div>
+                  <div id="myBtnContainer" class="filters">
+                    <button class="btn active1" onclick="currentSlide(1)"> Show all</button>
+                    <button class="btn" onclick="currentSlide(2)"> Most View</button>
+                    <button class="btn" onclick="currentSlide(3)"> Recent</button>
+                    <button class="btn" onclick="currentSlide(4)"> Famous</button>
+                  </div>
+                  <div class="clear-filter">
+                    <button onclick="saaa(1)">clear filters</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="collection-slideshow" id="s-all">
+              <div class="collection-container">
+                <div class="container2">
+                  <ul id="autoWidth" class="cs-hidden">
+                    <li class="item-a filterDivSl">
+                      <div class="collection-img1 front">
+                        <div class="collection-effect">
+                          <div class="collection-cont">
+
+                            <h1>Mac Products</h1>
+                            <div class="badge">
+                              <h5>Most View</h5>
+                            </div>
+                            <p>We imagine, design, and engineer brand programs and platforms for today’s most innovative
+                              companies.</p>
+                            <a href="#">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-b filterDiv">
+                      <div class="collection-img2 front">
+                        <div class="collection-effect">
+                          <div class="collection-cont">
+
+                            <h1>Mac Products</h1>
+                            <div class="badge">
+                              <h5>Most View</h5>
+                            </div>
+                            <p>We imagine, design, and engineer brand programs and platforms for today’s most innovative
+                              companies.</p>
+                            <a href="#">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+
+                    <li class="item-c filterDiv">
+                      <div class="collection-img3 front">
+                        <div class="collection-effect">
+                          <div class="collection-cont">
+
+                            <h1>Mac Products</h1>
+                            <div class="badge">
+                              <h5>Recent</h5>
+                            </div>
+                            <p>We imagine, design, and engineer brand programs and platforms for today’s most innovative
+                              companies.</p>
+                            <a href="#">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-d filterDiv">
+                      <div class="collection-img4 front">
+                        <div class="collection-effect">
+                          <div class="collection-cont">
+
+                            <h1>Mac Products</h1>
+                            <div class="badge">
+                              <h5>Recent</h5>
+                            </div>
+                            <p>We imagine, design, and engineer brand programs and platforms for today’s most innovative
+                              companies.</p>
+                            <a href="#">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-e filterDiv">
+                      <div class="collection-img5 front">
+                        <div class="collection-effect">
+                          <div class="collection-cont">
+
+                            <h1>Mac Products</h1>
+                            <div class="badge">
+                              <h5>Famous</h5>
+                            </div>
+                            <p>We imagine, design, and engineer brand programs and platforms for today’s most innovative
+                              companies.</p>
+                            <a href="#">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-f filterDiv">
+                      <div class="collection-img6 front">
+                        <div class="collection-effect">
+                          <div class="collection-cont">
+
+                            <h1>Mac Products</h1>
+                            <div class="badge">
+                              <h5>Famous</h5>
+                            </div>
+                            <p>We imagine, design, and engineer brand programs and platforms for today’s most innovative
+                              companies.</p>
+                            <a href="#">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="collection-slideshow">
+              <div class="collection-container">
+                <div class="container2">
+                  <li class="most-view filterDiv filter2">
+                    <div class="collection-img1 front">
+                      <div class="collection-effect">
+                        <div class="collection-cont">
+
+                          <h1>Mac Products</h1>
+                          <div class="badge">
+                            <h5>Most View</h5>
+                          </div>
+                          <p>We imagine, design, and engineer brand programs and platforms for today’s most innovative
+                            companies.</p>
+                          <a href="#">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="filterDiv most-view filter2">
+                    <div class="collection-img2 front">
+                      <div class="collection-effect">
+                        <div class="collection-cont">
+
+                          <h1>Mac Products</h1>
+                          <div class="badge">
+                            <h5>Most View</h5>
+                          </div>
+                          <p>We imagine, design, and engineer brand programs and platforms for today’s most innovative
+                            companies.</p>
+                          <a href="#">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <!-- recent -->
+
+
+
+
+            <div class="collection-slideshow">
+              <div class="collection-container">
+                <div class="container2">
+
+                  <li class="filterDiv recent filter2">
+                    <div class="collection-img3 front">
+                      <div class="collection-effect">
+                        <div class="collection-cont">
+
+                          <h1>Mac Products</h1>
+                          <div class="badge">
+                            <h5>Recent</h5>
+                          </div>
+                          <p>We imagine, design, and engineer brand programs and platforms for today’s most innovative
+                            companies.</p>
+                          <a href="#">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="filterDiv recent filter2">
+                    <div class="collection-img4 front">
+                      <div class="collection-effect">
+                        <div class="collection-cont">
+
+                          <h1>Mac Products</h1>
+                          <div class="badge">
+                            <h5>Recent</h5>
+                          </div>
+                          <p>We imagine, design, and engineer brand programs and platforms for today’s most innovative
+                            companies.</p>
+                          <a href="#">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- famous -->
+
+
+
+
+
+            <div class="collection-slideshow">
+              <div class="collection-container">
+                <div class="container2">
+                  <li class="filterDiv famous filter2">
+                    <div class="collection-img5 front">
+                      <div class="collection-effect">
+                        <div class="collection-cont">
+
+                          <h1>Mac Products</h1>
+                          <div class="badge">
+                            <h5>Famous</h5>
+                          </div>
+                          <p>We imagine, design, and engineer brand programs and platforms for today’s most innovative
+                            companies.</p>
+                          <a href="#">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="filterDiv famous filter2">
+                    <div class="collection-img6 front">
+                      <div class="collection-effect">
+                        <div class="collection-cont">
+
+                          <h1>Mac Products</h1>
+                          <div class="badge">
+                            <h5>Famous</h5>
+                          </div>
+                          <p>We imagine, design, and engineer brand programs and platforms for today’s most innovative
+                            companies.</p>
+                          <a href="#">Explore <i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
     </section>
     <!-- -- -->
     <section class="what">
       <div class="container">
         <h1>What We Do</h1>
-        <p>We're a branding & experience design agency that builds digital products and services that turn cultural values into company value.We're a branding & experience design agency that builds digital products and services that turn cultural values into company value.</p>
+        <p>We're a branding & experience design agency that builds digital products and services that turn cultural
+          values into company value.We're a branding & experience design agency that builds digital products and
+          services that turn cultural values into company value.</p>
       </div>
     </section>
     <section class="what-next">
       <div class="container">
-        <div class="see"><h1>See What's Next</h1></div>
+        <div class="see">
+          <h1>See What's Next</h1>
+        </div>
         <div class="next">
           <div class="product">
             <h1>Products</h1>
@@ -187,29 +480,33 @@
           </div>
           <div class="payment">
             <h1>Payment</h1>
-            <p>Let Kaleide handle your project from start to finish with an experienced creative team curated just for your needs.</p>
+            <p>Let Kaleide handle your project from start to finish with an experienced creative team curated just for
+              your needs.</p>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-<!------------------------------------------------>
+  <!------------------------------------------------>
   <footer>
     <section class="footer">
-      <div class="container">  
+      <div class="container">
         <div class="footer-logo">
           <a href="index.html"><img src="img/header-logo.png"></a>
         </div>
         <div class="contact">
           <div class="connect">
-            <div><h3>Follow Us</h3></div>
+            <div>
+              <h3>Follow Us</h3>
+            </div>
             <div>
               <a href="#"><i class="fab fa-facebook-square"></i></a>
               <a href="#"><i class="fab fa-whatsapp"></i></a>
-              <a href="#"><i class="fab fa-pinterest"></i></a></div>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
           </div>
-          <div class="policy">  
+          <div class="policy">
             <ul>
               <li><a href="#">Privacy policy</a></li>
               <li><a href="#">Refund policy</a></li>
@@ -225,30 +522,114 @@
           </div>
           <div class="subscribe">
             <form action="">
-              <input type="email" placeholder="Subscribe us">
-              <a href="#"><i class="fab fa-telegram-plane"></i></a>
+              <input type="email" id="mail" placeholder="Subscribe us">
+              <a href="#" onclick="fun()"><i class="fab fa-telegram-plane"></i></a>
             </form>
+            <small id="small" class="small">Submitted Successfully!</small>
+            <small id="small-e1" class="small-error">Sorry not Submitted!</small>
           </div>
         </div>
         <div class="copyright">
           <div class="container">
             <p>© 2019 SpaceHighTech.com | LOGIDACE</p>
-          </div>  
+          </div>
         </div>
       </div>
     </section>
   </footer>
-  <script>
-      // prevent default
-      document.querySelector('body').addEventListener('click', preventDflt);
-      function preventDflt(e){
-        var tElment = e.target.getAttribute('href');
-        var tElmentP = e.target.parentElement.getAttribute('href');
-        if(tElment == '#' || tElmentP == '#'){
-          e.preventDefault();
-        }
-      }
+
+  <!-- signup -->
+
+  <section class="sec8" id="login1">
+    <div class="sign_Up">
+      <div class="sign sign-h3">
+        <h3>Login</h3>
+      </div>
+      <div class="sign mail">
+        <input type="mail" id="mail2" required>
+        <label>Your Email</label>
+      </div>
+      <div class="sign pass">
+        <input type="password" id="pass" required>
+        <label>Password</label>
+      </div>
+      <div class="sign f-p">
+        <label>Forgot Password?</label>
+      </div>
+      <div class="sign s-b">
+        <button type="submit" onclick="login_input()"><a class="signUp_btn">LOGIN</a></button>
+      </div>
+      <div class="sign s-i-w">
+        <label>or sign in with:</label>
+      </div>
+      <div class="sign s-icons">
+        <div class="facebook">
+          <a><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <div class="twitter">
+          <a><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="google">
+          <a><i class="fab fa-google-plus-g"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- login -->
+
+  <section class="sec8" id="signup1">
+    <div class="sign_Up login">
+      <div class="sign sign-h3">
+        <h3>Sign Up</h3>
+      </div>
+      <div class="sign mail">
+        <input type="mail" name="mail" id="name" required>
+        <label>Name</label>
+      </div>
+      <div class="sign mail">
+        <input type="mail" name="mail" id="mail3" required>
+        <label>Your Email</label>
+      </div>
+      <div class="sign pass">
+        <input type="mail" name="Password" id="pass2" required>
+        <label>Your Password</label>
+      </div>
+      <div class="sign pass">
+        <input type="mail" name="Password" id="pass3" required>
+        <label>Confirm Password</label>
+      </div>
+      <div class="sign f-p">
+        <label>Forgot Password?</label>
+      </div>
+      <div class="sign s-b">
+        <button type="submit" onclick="login_signup()"><a class="signUp_btn">SIGN UP</a></button>
+      </div>
+      <div class="sign s-i-w">
+        <label>or sign up with:</label>
+      </div>
+      <div class="sign s-icons">
+        <div class="facebook">
+          <a><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <div class="twitter">
+          <a><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="google">
+          <a><i class="fab fa-google-plus-g"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="js/main.js"></script>
+  <script type="text/javascript" src="./js/jqueryup.js">
+    $('#ts-a1').on('mouseenter', function () {
+      $('#autoWidth3').auto = false;
+    });
+    $('#ts-a1').on('mouseleave', function () {
+      $('#autoWidth3').auto = true;
+    });
   </script>
-    
+
 </body>
+
 </html>
