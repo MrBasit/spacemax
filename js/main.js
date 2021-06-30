@@ -216,3 +216,149 @@ const gotoNum = number => {
   slides[next].style.transition = "all 1.5s";
 }
 
+
+
+
+// ---- searchbar start ----
+// Search Bar
+const searchBtn = document.querySelector('.search-btn');
+const cancelBtn = document.querySelector('.cancel-btn');
+const searchInput = document.querySelector('#myInput');
+const loader = document.getElementById("lod");
+const searchMainOverlay = document.querySelector('.search_item_main');
+let ul = document.getElementById("myUL");
+let li = ul.getElementsByClassName("search-items-item");
+
+
+
+searchBtn.addEventListener('click', function () {
+  searchMainOverlay.style.top = "0";
+  searchMainOverlay.style.transition = "all .5s ease";
+  document.getElementById('item-customer').innerHTML = '';
+})
+
+cancelBtn.addEventListener('click', function () {
+  searchMainOverlay.style.top = "-100%";
+  searchMainOverlay.style.transition = "all .5s ease";
+  searchInput.value = '';
+})
+
+
+searchInput.addEventListener('input', loadCustomers);
+
+// Load Customers
+function loadCustomers() {
+  inputValue = searchInput.value;
+  loader.style.display = "block";
+  setTimeout(function () {
+    loader.style.display = "none";
+  }, 400);
+  let customers = [
+    {
+      "small": "2011",
+      "h1": "The important skill come in generations",
+      "small2": "by elivonery"
+      
+    },
+    {
+      "small": "2012",
+      "h1": "We all get enjoyment of this",
+      "small2": "by anavali "
+    },
+    {
+      "small": "2020",
+      "h1": "This is well furnished all things",
+      "small2": "by bhoskaro"
+    },
+    {
+      "small": "2019",
+      "h1": "Overall fine but lets confirm",
+      "small2": "by casom"
+    }
+  ];
+
+
+
+  const results = [];
+
+
+  function trimString(s) {
+    var l = 0, r = s.length - 1;
+    while (l < s.length && s[l] == ' ') l++;
+    while (r > l && s[r] == ' ') r -= 1;
+    return s.substring(l, r + 1);
+  }
+
+  function compareObjects(o1, o2) {
+    var k = '';
+    for (k in o1) if (o1[k] != o2[k]) return false;
+    for (k in o2) if (o1[k] != o2[k]) return false;
+    return true;
+  }
+
+  function itemExists(haystack, needle) {
+    for (var i = 0; i < haystack.length; i++) if (compareObjects(haystack[i], needle)) return true;
+    return false;
+  }
+
+
+  function searchFor(inputValue) {
+    inputValue = trimString(inputValue); // trim it
+    for (var i = 0; i < customers.length; i++) {
+      for (var key in customers[i]) {
+        if (customers[i][key].indexOf(inputValue) != -1) {
+          if (!itemExists(results, customers[i])) { results.push(customers[i]) };
+
+        }
+      }
+    }
+    return results;
+  }
+  searchFor(inputValue);
+
+
+  function domUI(results) {
+    if (inputValue !== '') {
+      let output = '';
+
+      results.forEach(function (result) {
+        output += `
+      <div class="runTime-Main">
+    <div class="items-runTime">
+      <small>${result.small}</small>
+      <h1>${result.h1}</h1>
+      <small>${result.small2}</small>
+    </div>
+    <div class="items-runTime">
+    <small>${result.small}</small>
+    <h1>${result.h1}</h1>
+    <small>${result.small2}</small>
+    </div>
+    <div class="items-runTime">
+    <small>${result.small}</small>
+    <h1>${result.h1}</h1>
+    <small>${result.small2}</small>
+     </div>
+    </div>
+  `;
+      });
+
+      document.getElementById('item-customer').innerHTML = output;
+
+    }
+    // if (itemExists===false) {
+    //   document.getElementById('item-customer').innerHTML = '<small>No results Found<small>';
+    // }
+    if (inputValue === '' || inputValue.length >= results.length) {
+      document.getElementById('item-customer').innerHTML = '<small>No results Found<small>';
+    }
+  }
+  setTimeout(domUI(results), 5100);
+
+}
+
+// ---- searchbar end ----
+
+
+
+// console.log(searchFor('lo '));

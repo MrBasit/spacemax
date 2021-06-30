@@ -29,10 +29,12 @@ p{
   max-width: 75rem;
   margin: auto;
   padding: 0 2rem;
+  overflow-x: hidden;
 }
 /* --------------------------------------------------- */
 .header{
   padding: 2rem 0;
+  overflow: hidden !important;
 }
 .navbar{
   display: flex;
@@ -135,6 +137,126 @@ p{
 }
 /* --------------------------------------------------- */
 
+/* loadder */
+.loader {
+	display: none;
+  border: 6px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 6px solid #3498db;
+  min-width: 60px;
+  min-height: 60px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  margin:5px auto ;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* loader end */
+/* search icon  */
+.search_item_main{
+  display: flex;
+  flex-direction: column;
+ position:fixed;
+ top: -100%;
+ z-index: 999999999;
+ background-color:rgba(253, 246, 246, 0.4);
+width: 100vw;
+overflow: auto;
+height: 100vh;
+bottom: 0;
+left: 0;
+right: 0;
+}
+.search_list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 14px 2px whitesmoke;
+  background-color: #fff;
+  position: relative;
+  /* height: 300px; */
+}
+.sa-l{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.search-items{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.search-items-divs{
+  display: flex;
+  margin: 0px 10px;
+  overflow: hidden;
+  /* width: 100%; */
+  /* display: none; */
+  max-width: 1300px;
+}
+.runTime-Main{
+  display: flex;
+}
+.items-runTime{
+  padding: 5px;
+  width: 450px;
+}
+.items-runTime small{
+ color: red;
+}
+.search-items-item{
+  padding: 5px;
+  display: flex;
+  /* width: 100%; */
+  justify-content: center;
+  /* width: 300px; */
+}
+/* .search-items-item:nth-child(1){
+  display: flex;
+  width: 100%;
+} */
+.search-items-item p,h1{
+  padding: 5px;
+}
+
+.search-btn{
+  cursor: pointer;
+}
+.cancel-btn{
+  cursor: pointer;
+}
+.search-box{
+  display: flex;
+}
+
+.search_list input{
+ height: 50px;
+ width: 90%;
+ padding: 40px 10px;
+ margin: 35px 10px;
+ outline: none;
+ border: none;
+ font-size: 50px;
+}
+.search_list input::placeholder{
+color: gray;
+opacity: 0.3;
+ }
+
+/* search end */
 .slider{
   margin: 3rem 0;
   
@@ -1309,7 +1431,7 @@ footer{
     position: absolute;
     cursor: pointer;
     right: 2%;
-    top: 5%;
+    top: 4%;
     z-index: 99999;
     opacity: 1;
     padding: 1px;
@@ -1318,9 +1440,9 @@ footer{
   .bg {
     display: block;
   }
-  .header-menu{
+  /* .header-menu{
     display: none !important;
-  }
+  } */
   .header-menu li{
     padding: 20px 5px;
     width: 100%;
@@ -1335,7 +1457,7 @@ footer{
   
   .header-menu {
     position: absolute;
-    background: red;
+    background: gray;
     min-height: 100vh;
     width: 70%;
     flex-direction: column;
@@ -1344,6 +1466,7 @@ footer{
     right:-100%;
     top: -10px;
     margin-right: -5px !important;
+    z-index: 99999;
   }
   .header-menu.open {
     pointer-events: all;
@@ -1419,6 +1542,20 @@ footer{
     display: flex;
     flex-direction: column;
   }
+  .collection-heading h1 {
+    font-size: 1.4rem;
+  }
+  .collection-heading p{
+    margin-left: 0px !important;
+  }
+  .acordian__button {
+    padding: 5px 0 5px 10px;
+    width: 80px;
+  }
+  .search-items-item p, h1 {
+    padding: 0px;
+   
+}
   .filter-button{
     display: none;
   }
@@ -1585,36 +1722,3 @@ margin-left: 5px;
 
 
 
-
-.search-container{
-  background: #fff;
-  height: 30px;
-  border-radius: 30px;
-  padding: 10px 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: 0.8s;
-}
-
-.search-container:hover > .search-input{
-  width: 200px;
-  border: 1px solid black;
-  border-radius: 20px;
-}
-
-.search-container .search-input{
-  background: transparent;
-  border: none;
-  outline:none;
-  width: 0px;
-  font-weight: 500;
-  font-size: 16px;
-  transition: 0.8s;
-
-}
-
-.search-container .search-btn .fas{
-  color: black;
-}
